@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N7T-e3-aC8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="N7T-e3-aC8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +29,7 @@
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91e-PK-Zj5">
                                 <rect key="frame" x="269" y="358" width="61.5" height="13"/>
                                 <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32d-W9-0Cg">
@@ -109,9 +109,8 @@
                             <constraint firstItem="t3g-q8-bBR" firstAttribute="top" secondItem="FqB-qu-KBh" secondAttribute="bottom" constant="50" id="Ebr-oc-J8L"/>
                             <constraint firstItem="t3g-q8-bBR" firstAttribute="leading" secondItem="Cdd-j7-b6g" secondAttribute="leadingMargin" constant="30" id="VZd-iT-7pb"/>
                             <constraint firstItem="CjC-e7-qeV" firstAttribute="top" secondItem="4SH-3f-6BY" secondAttribute="bottom" constant="20" id="dnO-Pb-b78"/>
+                            <constraint firstAttribute="centerX" secondItem="4SH-3f-6BY" secondAttribute="centerX" id="fTK-YR-bdG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sy2-Zx-ntL" secondAttribute="trailing" constant="30" id="hcz-hU-oc1"/>
-                            <constraint firstItem="4SH-3f-6BY" firstAttribute="centerX" secondItem="Cdd-j7-b6g" secondAttribute="centerX" id="jms-uc-xMv"/>
-                            <constraint firstAttribute="centerY" secondItem="4SH-3f-6BY" secondAttribute="centerY" constant="-255" id="mri-Yn-KUo"/>
                             <constraint firstItem="Sy2-Zx-ntL" firstAttribute="top" secondItem="FqB-qu-KBh" secondAttribute="bottom" constant="50" id="rIa-W0-fAL"/>
                         </constraints>
                     </view>
