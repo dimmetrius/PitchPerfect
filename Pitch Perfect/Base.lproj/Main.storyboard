@@ -103,14 +103,36 @@
                                     <action selector="stopAudio:" destination="Rkh-T8-oli" eventType="touchUpInside" id="cQv-ge-A5X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z4P-v9-GQa">
+                                <rect key="frame" x="46" y="353" width="100" height="100"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="Rkh-T8-oli" eventType="touchUpInside" id="D26-9G-Z0i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GQ-H2-pUe">
+                                <rect key="frame" x="454" y="353" width="100" height="100"/>
+                                <state key="normal" image="darthvaider">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthvaderAudio:" destination="Rkh-T8-oli" eventType="touchUpInside" id="mzy-d7-Toy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2GQ-H2-pUe" secondAttribute="trailing" constant="30" id="A8n-pF-Owo"/>
                             <constraint firstItem="t3g-q8-bBR" firstAttribute="top" secondItem="FqB-qu-KBh" secondAttribute="bottom" constant="50" id="Ebr-oc-J8L"/>
+                            <constraint firstItem="z4P-v9-GQa" firstAttribute="leading" secondItem="Cdd-j7-b6g" secondAttribute="leadingMargin" constant="30" id="HfR-hK-hCg"/>
+                            <constraint firstItem="2GQ-H2-pUe" firstAttribute="top" secondItem="Sy2-Zx-ntL" secondAttribute="bottom" constant="139" id="IB2-0K-Jcj"/>
                             <constraint firstItem="t3g-q8-bBR" firstAttribute="leading" secondItem="Cdd-j7-b6g" secondAttribute="leadingMargin" constant="30" id="VZd-iT-7pb"/>
                             <constraint firstItem="CjC-e7-qeV" firstAttribute="top" secondItem="4SH-3f-6BY" secondAttribute="bottom" constant="20" id="dnO-Pb-b78"/>
                             <constraint firstAttribute="centerX" secondItem="4SH-3f-6BY" secondAttribute="centerX" id="fTK-YR-bdG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sy2-Zx-ntL" secondAttribute="trailing" constant="30" id="hcz-hU-oc1"/>
+                            <constraint firstItem="z4P-v9-GQa" firstAttribute="top" secondItem="t3g-q8-bBR" secondAttribute="bottom" constant="139" id="kem-Oc-yTe"/>
                             <constraint firstItem="Sy2-Zx-ntL" firstAttribute="top" secondItem="FqB-qu-KBh" secondAttribute="bottom" constant="50" id="rIa-W0-fAL"/>
                         </constraints>
                     </view>
@@ -139,6 +161,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvaider" width="100" height="100"/>
         <image name="fastbutton" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowbutton" width="100" height="100"/>
