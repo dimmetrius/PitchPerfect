@@ -14,7 +14,7 @@ class PlaySoundsViewController: UIViewController {
     var audioPlayer : AVAudioPlayer!
     var recievedAudio : RecordedAudio!
     var audioEngine: AVAudioEngine!
-    var audioFile:AVAudioFile!
+    var audioFile: AVAudioFile!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,29 +28,14 @@ class PlaySoundsViewController: UIViewController {
         
         
     }
-    @IBAction func playSlowAudio(sender: UIButton) {
+
+    func playAudioWithVariableSpeed(rate: Float){
         audioPlayer.stop()
         audioEngine.stop()
         audioEngine.reset()
-        audioPlayer.rate = 0.5
+        audioPlayer.rate = rate
         audioPlayer.currentTime = 0.0
         audioPlayer.play();
-    }
-    
-    @IBAction func playFastAudio(sender: UIButton) {
-        audioPlayer.stop()
-        audioEngine.stop()
-        audioEngine.reset()
-        audioPlayer.rate = 1.5
-        audioPlayer.currentTime = 0.0
-        audioPlayer.play()
-        
-    }
-    @IBAction func playChipmunkAudio(sender: UIButton) {
-        playAudioWithVariablePitch(1000)
-    }
-    @IBAction func playDarthvaderAudio(sender: UIButton) {
-        playAudioWithVariablePitch(-1000)
     }
     
     func playAudioWithVariablePitch(pitch: Float){
@@ -72,6 +57,22 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.startAndReturnError(nil)
         
         audioPlayerNode.play()
+    }
+    
+    @IBAction func playSlowAudio(sender: UIButton) {
+        playAudioWithVariableSpeed(0.5)
+    }
+    
+    @IBAction func playFastAudio(sender: UIButton) {
+        playAudioWithVariableSpeed(1.5)
+        
+    }
+
+    @IBAction func playChipmunkAudio(sender: UIButton) {
+        playAudioWithVariablePitch(1000)
+    }
+    @IBAction func playDarthvaderAudio(sender: UIButton) {
+        playAudioWithVariablePitch(-1000)
     }
     
     @IBAction func stopAudio(sender: UIButton) {

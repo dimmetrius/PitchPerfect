@@ -15,7 +15,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var recordingInProgress: UILabel!
     
-    var audioRecorder:AVAudioRecorder!
+    var audioRecorder: AVAudioRecorder!
     var recordedAudio: RecordedAudio!
     
     override func viewDidLoad() {
@@ -44,13 +44,14 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
             println("Recording was not successful")
             recordButton.enabled = true
             stopButton.hidden = true
+            recordingInProgress.text = "Tap to Record"
         }
         
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "stopRecording"){
-            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
+            let playSoundsVC: PlaySoundsViewController = segue.destinationViewController as PlaySoundsViewController
             
             let data = sender as RecordedAudio
             
@@ -59,7 +60,6 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(sender: UIButton) {
-        recordingInProgress.text = "Tap to Record"
         stopButton.hidden = true
         audioRecorder.stop()
         var audioSession = AVAudioSession.sharedInstance()
@@ -70,7 +70,7 @@ class RecordAudioViewController: UIViewController, AVAudioRecorderDelegate {
         stopButton.hidden = false
         recordingInProgress.text = "Recording"
         recordButton.enabled = false
-        //Inside func recordAudio(sender: UIButton)
+
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
         let currentDateTime = NSDate()
